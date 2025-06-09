@@ -9,7 +9,6 @@ import lombok.Setter;
 @Setter // implements setters
 @NoArgsConstructor // creates a No argument constructor
 @AllArgsConstructor // creates constructor with arguments
-
 public class Author {
 
     private Integer id;
