@@ -1,11 +1,13 @@
 package com.adagedo_softengineer.Jpa.models;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -41,5 +43,10 @@ public class Author {
 
     @Column(insertable = false)
     private LocalDateTime lastModified;
+
+    @ManyToMany(
+        mappedBy = "authors"
+    )
+    private List<Course> Courses;
 
 }
