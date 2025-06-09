@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,5 +37,9 @@ public class Section {
         mappedBy = "section"
     )
     private List<Lecture> lectures;
+
+    @OneToOne
+    @JoinColumn(name="resource_id")
+    private Resource resource;
 
 }
