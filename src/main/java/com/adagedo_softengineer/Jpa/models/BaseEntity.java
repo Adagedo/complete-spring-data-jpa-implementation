@@ -6,12 +6,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@MappedSuperclass
+@Data // create getters and setters for us behind the scene
 @NoArgsConstructor // creates a No argument constructor
 @AllArgsConstructor // creates constructor with arguments
 @SuperBuilder
