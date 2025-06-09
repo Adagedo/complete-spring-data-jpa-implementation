@@ -3,27 +3,23 @@ package com.adagedo_softengineer.Jpa.models;
 import java.util.List;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Data // this annotations severs the same purpose as the getters ans setters
-@Builder
+@EqualsAndHashCode(callSuper = true) // allow you to call the super class for the data implementation
+@Data // create getters and setters for us behind the scene
+@NoArgsConstructor // creates a No argument constructor
+@AllArgsConstructor // creates constructor with arguments
+@SuperBuilder
 @Entity
-public class Section {
-
-    @Id
-    @GeneratedValue
-    private Integer id;
+public class Section extends BaseEntity {
 
     private String name;
 

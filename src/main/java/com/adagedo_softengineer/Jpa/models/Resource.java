@@ -1,23 +1,20 @@
 package com.adagedo_softengineer.Jpa.models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
-@Builder
+@EqualsAndHashCode(callSuper = true) // allow you to call the super class for the data implementation
+@Data // create getters and setters for us behind the scene
+@NoArgsConstructor // creates a No argument constructor
+@AllArgsConstructor // creates constructor with arguments
+@SuperBuilder
 @Entity
-public class Resource {
+public class Resource extends BaseEntity{
 
-    @Id
-    @GeneratedValue
-    private Integer id;
 
     private String name;
 

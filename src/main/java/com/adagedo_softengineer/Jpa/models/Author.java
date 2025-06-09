@@ -5,26 +5,21 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
-@Getter // implements getters for the author fields 
-@Setter // implements setters
+@EqualsAndHashCode(callSuper = true) // allow you to call the super class for the data implementation
+@Data // create getters and setters for us behind the scene
 @NoArgsConstructor // creates a No argument constructor
 @AllArgsConstructor // creates constructor with arguments
-@Builder
+@SuperBuilder
 @Entity
-public class Author {
+public class Author extends BaseEntity{
 
-    @Id
-    @GeneratedValue // auto generate our id
-    @Column(unique = true)
     private Integer id;
 
     @Column(nullable = false, length=20)
