@@ -10,17 +10,15 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data // this annotations severs the same purpose as the getters ans setters
+@Data
 @Builder
 @Entity
-public class Section {
+public class Lecture {
 
     @Id
     @GeneratedValue
     private Integer id;
 
     private String name;
-
-    private int order;
 
 }
