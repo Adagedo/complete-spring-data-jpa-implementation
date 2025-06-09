@@ -38,7 +38,6 @@ public class Course {
                 @JoinColumn(name="author_id")
             }
         )
-    @JoinColumn
     private List<Author> authors;
 
 }
