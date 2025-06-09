@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,6 +16,7 @@ import lombok.Setter;
 @Setter // implements setters
 @NoArgsConstructor // creates a No argument constructor
 @AllArgsConstructor // creates constructor with arguments
+@Builder
 @Entity
 public class Author {
 
@@ -34,7 +36,7 @@ public class Author {
 
     private Integer age;
 
-    @Column(updatable=false, nullable=false)
+    @Column(updatable=false)
     private LocalDateTime createdAt;
 
     @Column(insertable = false)
