@@ -14,7 +14,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor 
 @AllArgsConstructor 
 @SuperBuilder
-public class Video {
+@Entity
+public class Video extends Resource{
 
     private int length;
 }

@@ -13,7 +13,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor 
 @AllArgsConstructor 
 @SuperBuilder
-public class Text {
+@Entity
+public class Text extends Resource{
 
     private String content;
 }

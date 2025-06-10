@@ -1,6 +1,7 @@
 package com.adagedo_softengineer.Jpa.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Inheritance;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,6 +14,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor // creates constructor with arguments
 @SuperBuilder
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Resource extends BaseEntity{
 
 
