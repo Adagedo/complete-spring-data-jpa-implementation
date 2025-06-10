@@ -15,7 +15,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor // creates a No argument constructor
 @AllArgsConstructor // creates constructor with arguments
 @SuperBuilder
-@Entity
+@MappedSuperclass
 public class BaseEntity {
 
     @Id
