@@ -1,6 +1,7 @@
 package com.adagedo_softengineer.Jpa.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.DiscrimatorColumn;
 import jakarta.persistence.Inheritance;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +16,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscrimatorColumn(name = resource_type)
 public class Resource extends BaseEntity{
 
 
